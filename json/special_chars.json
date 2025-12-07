@@ -1,0 +1,184 @@
+[
+  {
+    "codepoint": "U+20AC",
+    "char": "€",
+    "name": "EURO SIGN"
+  },
+  {
+    "codepoint": "U+00A3",
+    "char": "£",
+    "name": "POUND SIGN"
+  },
+  {
+    "codepoint": "U+00A5",
+    "char": "¥",
+    "name": "YEN SIGN"
+  },
+  {
+    "codepoint": "U+20B1",
+    "char": "₱",
+    "name": "PHILIPPINE PESO SIGN"
+  },
+  {
+    "codepoint": "U+20B9",
+    "char": "₹",
+    "name": "INDIAN RUPEE SIGN"
+  },
+  {
+    "codepoint": "U+20AA",
+    "char": "₪",
+    "name": "NEW SHEQEL SIGN"
+  },
+  {
+    "codepoint": "U+20A9",
+    "char": "₩",
+    "name": "WON SIGN"
+  },
+  {
+    "codepoint": "U+20B2",
+    "char": "₲",
+    "name": "GUARANI SIGN"
+  },
+  {
+    "codepoint": "U+20A1",
+    "char": "₡",
+    "name": "COLON SIGN"
+  },
+  {
+    "codepoint": "U+20A4",
+    "char": "₤",
+    "name": "LIRA SIGN"
+  },
+  {
+    "codepoint": "U+20A6",
+    "char": "₦",
+    "name": "NAIRA SIGN"
+  },
+  {
+    "codepoint": "U+20A8",
+    "char": "₨",
+    "name": "RUPEE SIGN"
+  },
+  {
+    "codepoint": "U+20AB",
+    "char": "₫",
+    "name": "DONG SIGN"
+  },
+  {
+    "codepoint": "U+20AD",
+    "char": "₭",
+    "name": "KIP SIGN"
+  },
+  {
+    "codepoint": "U+20AE",
+    "char": "₮",
+    "name": "TUGRIK SIGN"
+  },
+  {
+    "codepoint": "U+20AF",
+    "char": "₯",
+    "name": "DRACHMA SIGN"
+  },
+  {
+    "codepoint": "U+20B0",
+    "char": "₰",
+    "name": "GERMAN PENNY SIGN"
+  },
+  {
+    "codepoint": "U+20BC",
+    "char": "₼",
+    "name": "MANAT SIGN"
+  },
+  {
+    "codepoint": "U+20BD",
+    "char": "₽",
+    "name": "RUBLE SIGN"
+  },
+  {
+    "codepoint": "U+20BF",
+    "char": "₿",
+    "name": "BITCOIN SIGN"
+  },
+
+  {
+    "codepoint": "U+00E1",
+    "char": "á",
+    "name": "LATIN SMALL LETTER A WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00E9",
+    "char": "é",
+    "name": "LATIN SMALL LETTER E WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00ED",
+    "char": "í",
+    "name": "LATIN SMALL LETTER I WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00F3",
+    "char": "ó",
+    "name": "LATIN SMALL LETTER O WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00FA",
+    "char": "ú",
+    "name": "LATIN SMALL LETTER U WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00C1",
+    "char": "Á",
+    "name": "LATIN CAPITAL LETTER A WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00C9",
+    "char": "É",
+    "name": "LATIN CAPITAL LETTER E WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00CD",
+    "char": "Í",
+    "name": "LATIN CAPITAL LETTER I WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00D3",
+    "char": "Ó",
+    "name": "LATIN CAPITAL LETTER O WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00DA",
+    "char": "Ú",
+    "name": "LATIN CAPITAL LETTER U WITH ACUTE"
+  },
+  {
+    "codepoint": "U+00F1",
+    "char": "ñ",
+    "name": "LATIN SMALL LETTER N WITH TILDE"
+  },
+  {
+    "codepoint": "U+00D1",
+    "char": "Ñ",
+    "name": "LATIN CAPITAL LETTER N WITH TILDE"
+  },
+  {
+    "codepoint": "U+00FC",
+    "char": "ü",
+    "name": "LATIN SMALL LETTER U WITH DIAERESIS"
+  },
+  {
+    "codepoint": "U+00DC",
+    "char": "Ü",
+    "name": "LATIN CAPITAL LETTER U WITH DIAERESIS"
+  },
+  {
+    "codepoint": "U+00AA",
+    "char": "ª",
+    "name": "FEMININE ORDINAL INDICATOR"
+  },
+  {
+    "codepoint": "U+00BA",
+    "char": "º",
+    "name": "MASCULINE ORDINAL INDICATOR"
+  }
+]
+

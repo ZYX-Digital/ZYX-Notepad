@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZYX Multi-Split Notepad</title> 
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> 
+    <link rel="stylesheet" href="css/notepad_style.css">  
+
+</head>
+<body id="body">
+
+    <div id="tools-panel">
+        <div id="tools-panel-header">
+            <button id="tools-panel-close-btn"></button>
+            <h3>Tools</h3>
+        </div>
+        
+        <div id="tools-panel-content">
+        
+            <div id="tools-main-view">
+                <button id="show-calculator-button" class="tool-item">Calculator</button>
+                
+                <div id="embedded-calculator" class="hidden">
+                    <input type="text" id="calc-display" readonly>
+                    <div id="calc-buttons">
+                        <button class="calc-btn" data-value="7">7</button>
+                        <button class="calc-btn" data-value="8">8</button>
+                        <button class="calc-btn" data-value="9">9</button>
+                        <button class="calc-btn operator" data-value="/">/</button>
+
+                        <button class="calc-btn" data-value="4">4</button>
+                        <button class="calc-btn" data-value="5">5</button>
+                        <button class="calc-btn" data-value="6">6</button>
+                        <button class="calc-btn operator" data-value="*">*</button>
+
+                        <button class="calc-btn" data-value="1">1</button>
+                        <button class="calc-btn" data-value="2">2</button>
+                        <button class="calc-btn" data-value="3">3</button>
+                        <button class="calc-btn operator" data-value="-">-</button>
+
+                        <button class="calc-btn" data-value="0">0</button>
+                        <button class="calc-btn" data-value=".">.</button>
+                        <button class="calc-btn" data-value="C">C</button>
+                        <button class="calc-btn operator" data-value="+">+</button>
+
+                        <button class="calc-btn equals" data-value="=">=</button>
+                    </div>
+                </div>
+                
+                <button id="show-random-text-button" class="tool-item">Random Text Generator</button>
+                
+                <div id="random-text-generator" class="hidden">
+                    <div id="generated-text-output-container">
+                        <textarea id="generated-text-output" readonly placeholder="Your random text will appear here..."></textarea>
+                        <button id="copy-generated-text">Copy</button>
+                    </div>
+                    <label for="char-set" style="font-size: 14px; margin-bottom: -5px;">Available Characters:</label>
+                    <textarea id="char-set">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~</textarea>
+                    <div id="length-container">
+                        <label for="text-length">Length:</label>
+                        <input type="number" id="text-length" value="8" min="1">
+                        <button id="fill-ascii-button">Fill with ASCII</button>
+                    </div>
+                    <button id="generate-text-button" class="tool-item">Generate</button>
+                </div>
+                
+                <button id="show-special-chars-button" class="tool-item">Special Characters</button>
+                
+                <div id="special-chars-panel" class="hidden">
+                    <input type="text" id="special-chars-search" placeholder="Search characters...">
+                    <div id="special-chars-list">
+                    </div>
+                </div>
+
+                <div id="tool-links">
+                    <br>
+                    <h4 style="margin: 5px 0 5px 0; color: #555; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; font-weight: bold;">Outside Tools</h4>
+                    
+                    <a href="https://tools.zyx.digital/calculator" class="tool-item" target="_blank" rel="noopener noreferrer">Full Calculator</a>
+                    <a href="https://tools.zyx.digital//othertextedit" class="tool-item" target="_blank" rel="noopener noreferrer">Other Text Edit</a>                
+                    <a href="https://dns.zyx.digital/" class="tool-item" target="_blank" rel="noopener noreferrer">DNS and Domain info</a>              
+                    <a href="https://tools.zyx.digital//chosen_one" class="tool-item" target="_blank" rel="noopener noreferrer">You Are The Chosen One</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div id="history-panel">
+        <h3>History</h3>
+        <ul id="history-list">
+        </ul>
+        <button id="history-clear-button">Clear History</button>
+    </div>
+
+    <div id="container">
+        
+        <button id="history-close-btn"></button>
+        <button id="hamburger-menu-toggle">&#9776;</button>
+        
+        <div id="notepad-title">
+            <span>&gt;_</span>ZYX Notepad<span id="title-cursor"></span>
+        </div>
+        
+        <div id="split-header-0" class="split-header">
+            <span class="split-label">Split View 1</span>
+            <button class="split-close-btn" data-split-index="0">&times;</button>
+        </div>
+        <div id="tab-bar-0" class="split-tab-bar">
+            <button class="new-tab-button" data-split-index="0" title="Create a new tab">+</button>
+        </div>
+        <div id="line-numbers-0" class="split-line-numbers">1</div>
+        <textarea id="text-input-0" class="split-text-input" placeholder="Split 1: Start typing..." spellcheck="false" autocorrect="off"></textarea>
+        <div id="status-bar-0" class="split-status-bar">
+            <div class="status-left-items">
+                <span class="word-count-label">Word Count: 0</span>
+                <div class="spellcheck-container">
+                    <input type="checkbox" id="spellcheck-toggle-0" class="spellcheck-toggle" data-split-index="0" title="Toggle Spellcheck">
+                    <label for="spellcheck-toggle-0">Spellcheck</label>
+                </div>
+            </div>
+            <button class="save-tab-button" data-split-index="0" title="Save this tab as .txt">Save as TXT</button>
+        </div>
+        
+        <div id="split-header-1" class="split-header hidden">
+            <span class="split-label">Split View 2</span>
+            <button class="split-close-btn" data-split-index="1">&times;</button>
+        </div>
+        <div id="tab-bar-1" class="split-tab-bar hidden">
+            <button class="new-tab-button" data-split-index="1" title="Create a new tab">+</button>
+        </div>
+        <div id="line-numbers-1" class="split-line-numbers hidden">1</div>
+        <textarea id="text-input-1" class="split-text-input hidden" placeholder="Split 2: Start typing..." spellcheck="false" autocorrect="off"></textarea>
+        <div id="status-bar-1" class="split-status-bar hidden">
+            <div class="status-left-items">
+                <span class="word-count-label">Word Count: 0</span>
+                <div class="spellcheck-container">
+                    <input type="checkbox" id="spellcheck-toggle-1" class="spellcheck-toggle" data-split-index="1" title="Toggle Spellcheck">
+                    <label for="spellcheck-toggle-1">Spellcheck</label>
+                </div>
+            </div>
+            <button class="save-tab-button" data-split-index="1" title="Save this tab as .txt">Save as TXT</button>
+        </div>
+        
+        <div id="split-header-2" class="split-header hidden">
+            <span class="split-label">Split View 3</span>
+            <button class="split-close-btn" data-split-index="2">&times;</button>
+        </div>
+        <div id="tab-bar-2" class="split-tab-bar hidden">
+            <button class="new-tab-button" data-split-index="2" title="Create a new tab">+</button>
+        </div>
+        <div id="line-numbers-2" class="split-line-numbers hidden">1</div>
+        <textarea id="text-input-2" class="split-text-input hidden" placeholder="Split 3: Start typing..." spellcheck="false" autocorrect="off"></textarea>
+        <div id="status-bar-2" class="split-status-bar hidden">
+            <div class="status-left-items">
+                <span class="word-count-label">Word Count: 0</span>
+                <div class="spellcheck-container">
+                    <input type="checkbox" id="spellcheck-toggle-2" class="spellcheck-toggle" data-split-index="2" title="Toggle Spellcheck">
+                    <label for="spellcheck-toggle-2">Spellcheck</label>
+                </div>
+            </div>
+            <button class="save-tab-button" data-split-index="2" title="Save this tab as .txt">Save as TXT</button>
+        </div>
+        
+        <div id="button-container">
+            <a href="https://tools.zyx.digital" id="home-icon-btn" title="Go Home">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search all tabs...">
+                <div id="search-dropdown-results"></div>
+            </div>
+            
+            <button id="split-button" title="Add Split View">Split</button>
+            
+            <div class="dropdown">
+                <button id="more-button">More</button>
+                <div id="more-dropdown-content" class="dropdown-content">
+                    <select id="font-selector" title="Select Font">
+                        <option value="Arial">Arial (Sans-Serif)</option>
+                        <option value="Verdana">Verdana (Sans-Serif)</option>
+                        <option value="Helvetica">Helvetica (Sans-Serif)</option>
+                        <option value="Georgia">Georgia (Serif)</option>
+                        <option value="Times New Roman">Times New Roman (SerIF)</option>
+                        <option value="Courier New">Courier New (Monospace)</option>
+                    </select>
+                    <div class="font-size-controls">
+                        <button id="font-size-down" title="Decrease Font Size">A-</button>
+                        <button id="font-size-up" title="Increase Font Size">A+</button>
+                    </div>
+                    
+                    <button id="mode-toggle">Toggle Dark Mode</button>
+                    <button id="show-url-button" title="Get Shareable URL">Get Share URL</button>
+                    <button id="about-button">About</button>
+                    <a href="ZYXNotepad.zip" id="offline-download-link" download>Download Offline</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="tools-trigger" title="Open Tools">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    
+    <button id="history-trigger" title="Open History">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <footer id="main-footer">
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/www.zyx.digital" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/zyxdigital" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/zyx-digital" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <div id="about-modal-overlay">
+        <div id="about-modal-content">
+            <button id="about-modal-close-btn">&times;</button>
+            <h1>Welcome to ZYX Notepad!</h1>
+            <p>ZYX Notepad is more than just a simple text editor; it's a powerful, persistent, and private workspace designed to live directly in your browser. Whether you're a developer needing a scratchpad, a writer drafting ideas, or just someone who needs to jot down notes quickly, ZYX Notepad is built to be your reliable digital companion.</p>
+
+            <h3>Your Data & Privacy</h3>
+            <strong>Private and Persistent Storage</strong>
+            <p>All your notes, tabs, and settings are saved <em>only</em> to your browser's <span class="code">localStorage</span>. This means your data is private to you and never sent to a server.</p>
+            <p>Because your data is saved to a persistent file on your hard drive (managed by the browser), your work <strong>will survive a reboot</strong> of your computer. When you reopen this page, your notes will load exactly as you left them.</p>
+
+            <strong>Important Warnings:</strong>
+            <ul>
+                <li><strong>How Data Can Be Lost:</strong> Your data <em>will</em> be permanently lost if you:
+                    <ul>
+                        <li>Manually clear your browser's cache, cookies, or "site data."</li>
+                        <li>Switch to a different browser (e.g., notes in Chrome won't appear in Firefox).</li>
+                    </ul>
+                </li>
+                <li><strong>Private/Incognito Mode:</strong>
+                    <ul>
+                        <li>In a private window, your text <strong>will survive a page refresh or reload</strong>.</li>
+                        <li>However, all data will be <strong>permanently erased</strong> the moment you <strong>close the private window or tab</strong>.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Dynamic Split-Views:</strong> Organize your workspace with up to three split views. You can now <strong>rename</strong> any split by clicking its label.</li>
+                <li><strong>Smart Tab Management:</strong> Create, rename, and close tabs freely. If you close a Split View, your open tabs are automatically <strong>migrated</strong> to the remaining view so you never lose your work.</li>
+                <li><strong>Global Search:</strong> Instantly find what you're looking for. The search bar scans the content of <em>all</em> your tabs across <em>all</em> your splits and shows you exactly where your text is.</li>
+                <li><strong>Built-in Tools Panel:</strong> Slide out the "Tools" panel (using the smart side-arrow) for quick access to:
+                    <ul>
+                        <li>A <strong>Standard Calculator</strong> (with full numpad support).</li>
+                        <li>A <strong>Random Text Generator</strong> (for placeholders and passwords).</li>
+                        <li>A <strong>Special Characters</strong> tool to easily find and copy unicode symbols.</li>
+                        <li>Links to <strong>Full Calculator</strong>, <strong>DNS Info</strong>, and other external apps.</li>
+                    </ul>
+                </li>
+                <li><strong>Offline-Ready:</strong> You can download a fully offline version of this page. Click <strong>More > Download Offline</strong> to save the application HTML file to your device.</li>
+                <li><strong>Action History:</strong> Access the history panel using the side-arrow to view recent copy, cut, and delete actions, allowing you to retrieve text you thought was lost.</li>
+                <li><strong>Full Customization:</strong>
+                    <ul>
+                        <li><strong>Light & Dark Mode:</strong> Switch between a clean light theme or a sleek, eye-friendly dark mode.</li>
+                        <li><strong>Font Control:</strong> Adjust the <strong>font family</strong> and <strong>font size</strong> to find your perfect reading environment.</li>
+                    </ul>
+                </li>
+                <li><strong>Notepad Utilities:</strong> Each editor panel is packed with features, including:
+                    <ul>
+                        <li>Live Word Count</li>
+                        <li>Synchronized Line Numbers</li>
+                        <li>A "Save as TXT" button to download your current tab.</li>
+                        <li>A toggle for browser spellcheck.</li>
+                    </ul>
+                </li>
+                <li><strong>Share Your Layout:</strong> The "Get Share URL" button creates a unique link that saves your current theme, font settings, and split-screen layout.</li>
+            </ul>
+            
+            <h3>Responsive Mobile Layout</h3>
+            <p>This application is fully responsive and designed to work great on mobile. On smaller screens, the layout adapts:</p>
+            <ul>
+                <li>The main controls collapse into a convenient <strong>hamburger menu (&#9776;)</strong>.</li>
+                <li>The "More" menu and its options are flattened for easy, one-tap access.</li>
+                <li>Split-screen views will automatically stack vertically so you can scroll through your notes.</li>
+            </ul>
+
+            <h3>A Note on Tracking</h3>
+            <strong>Google Analytics</strong>
+            <p>This page uses a standard Google Analytics tag to log a single "pageview" when the application first loads. This is done purely to monitor that the page is loading correctly.</p>
+            <p>Immediately after this single event (within 500 milliseconds), the script <strong>completely removes all Google Analytics code</strong> and deletes its data from the page. No further tracking of any kind occurs during your session.</p>
+
+            <hr>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/www.zyx.digital" target="_blank" rel="noopener noreferrer" title="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/zyxdigital" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/zyx-digital" target="_blank" rel="noopener noreferrer" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="js/notepad_script.js"></script>
+
+</body>
+</html>
